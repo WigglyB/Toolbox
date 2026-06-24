@@ -1,0 +1,13 @@
+1.0.1:
+    added bytes to numbers capabilities (and vice versa)
+    added log printing to Toolbox.main()
+    added pointer
+    added prefered class obtaining capabilities to all SuperObject's
+1.0.2:
+    replaced SuperObject and SuperObjectInterface with the Byteable interface
+    added Expression sub-library
+    added Ownership framework
+    added java launching capabilities to Toolbox
+1.0.3:
+    fixed a poorly made function declaration in Owner
+    added CompactBitArray
