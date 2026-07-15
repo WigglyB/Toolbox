@@ -1,6 +1,7 @@
 package toolbox;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Pointer<T> implements java.lang.Cloneable, Serializable {
     public T value;
@@ -24,5 +25,16 @@ public class Pointer<T> implements java.lang.Cloneable, Serializable {
     @Override
     public boolean equals(Object obj) {
         return value==obj;
+    }
+
+
+    @SuppressWarnings("unchecked")
+    public static <T> T[] getValues(Pointer<T>[] pointers){
+        
+        ArrayList<T> ins=new ArrayList<>();
+        for(Pointer<T> p:pointers){
+            ins.add(p.value);
+        }
+        return (T[])ins.toArray();
     }
 }

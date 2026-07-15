@@ -1,6 +1,6 @@
 package toolbox;
 
-import java.text.Collator;
+
 import java.util.Collection;
 
 public interface Owner<A extends Ownable<? extends Owner<A>>> {
