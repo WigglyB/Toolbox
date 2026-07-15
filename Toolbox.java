@@ -1,16 +1,22 @@
 package toolbox;
 
 
-import toolbox.Expression.*;
+
 
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+
+import java.net.http.HttpRequest;
 import java.util.*;
 
+import toolbox.Network.HTTPClientManager;
+import toolbox.Network.TCPClient;
+import toolbox.Network.TCPServer;
+
 public class Toolbox{
-    public static final String VERSION = "1.0.2";
+    public static final String VERSION = "1.0.4";
     @Override
     public String toString() {
         return VERSION;
@@ -34,7 +40,7 @@ public class Toolbox{
 
         System.out.println("running tests...");
         
-
+        
     }
     
     public static boolean[] byteToBooleans(byte b) {
@@ -57,6 +63,7 @@ public class Toolbox{
         }
         return b;
     }
+    
 
     public static short bytesToShort(byte high, byte low) {
         return (short) ((high << 8) | (low & 0xFF));

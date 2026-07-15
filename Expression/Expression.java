@@ -6,7 +6,6 @@ import java.util.Map;
 public interface Expression extends Serializable{
     public abstract double evaluate(Map<String,Double> variables);
     public abstract String Trace();
-    
     public static Expression PI=new Expression() {
         @Override
         public double evaluate(Map<String, Double> variables) {

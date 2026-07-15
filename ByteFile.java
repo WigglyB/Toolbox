@@ -16,7 +16,7 @@ import java.util.zip.ZipOutputStream;
 public class ByteFile implements Byteable{
     @Override
     public byte[] toBytes() {
-        return data;
+        return data.clone();
     }
     
     private byte[] data;
@@ -111,10 +111,6 @@ public class ByteFile implements Byteable{
     }
 
     public static ByteFile[] unzip(ByteFile archive) {
-        
-        
-        
-
         ArrayList<ByteFile> files = new ArrayList<>();
 
         try {
@@ -150,7 +146,6 @@ public class ByteFile implements Byteable{
 
         return files.toArray(new ByteFile[0]);
     }
-
 
     public static byte[] readFile(String filePath) throws IOException {
         return Files.readAllBytes(Path.of(filePath));
